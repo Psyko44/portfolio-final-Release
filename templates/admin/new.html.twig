@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Projects
+{% endblock %}
+
+{% block body %}
+
+	<header class="mastheadAdmin d-flex align-items-center">
+
+		<div class="container px-4 px-lg-5 text-center">
+
+			<h1 class="mb-1"></h1>
+
+
+		</div>
+	</header>
+
+
+	<div class="container mt-5">
+		<h1>Cree nouveau projet</h1>
+
+
+		{{ include('admin/_form.html.twig') }}
+
+		<a class="text-success" href="{{ path('app_admin_index') }}">
+			<h5>Retourner a la liste</h5>
+		</a>
+
+	</div>
+{% endblock %}

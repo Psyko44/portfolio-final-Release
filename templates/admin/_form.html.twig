@@ -1,0 +1,13 @@
+<div class="container w-80">
+	{{ form_start(form) }}
+	<label for="name">Nom</label>
+	{{ form_widget(form.name) }}
+	<label for="description">Description</label>
+	{{ form_widget(form.description) }}
+	<label for="link">Link</label>
+	{{ form_widget(form.link) }}
+
+
+	<button class="btn btn-success mt-5 mb-5">{{ button_label|default('Enregistrer') }}</button>
+	{{ form_end(form) }}
+</div>

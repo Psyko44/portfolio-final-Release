@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projects index
+{% endblock %}
+
+{% block body %}
+
+	<header class="mastheadAdmin d-flex align-items-center">
+
+		<div class="container px-4 px-lg-5 text-center">
+
+			<h1 class="mb-1"></h1>
+
+
+		</div>
+	</header>
+
+	<div class="container mt-5">
+
+		<h1>Liste des projets</h1>
+
+		<a class="text-success" href="{{ path('app_admin_new') }}">
+			<h4>Cree nouveau projet</h4>
+		</a>
+
+
+		<table class="table text-white">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Link</th>
+					<th>actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for project in projects %}
+					<tr>
+						<td>{{ project.id }}</td>
+						<td>{{ project.name }}</td>
+						<td>{{ project.description }}</td>
+						<td>{{ project.link }}</td>
+
+						<td>
+							<a class="text-success" href="{{ path('app_admin_show', {'id': project.id}) }}">
+								<h5>Voir</h5>
+							</a>
+							<a class="text-success" href="{{ path('app_admin_edit', {'id': project.id}) }}">
+								<h5>Modifier</h5>
+							</a>
+
+							<form method="post" action="{{ path('app_admin_delete', {'id': project.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+								<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ project.id) }}">
+								<button class="btn btn-danger">Supprimer</button>
+							</form>
+
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="5">no records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+
+	</div>
+
+
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!
+{% endblock %}
+
+{% block body %}
+
+	<header class="mastheadContact d-flex align-items-center">
+
+		<div class="container px-4 px-lg-5 text-center">
+
+			<h1 class="mb-1"></h1>
+
+
+		</div>
+	</header>
+
+
+	<section class="ftco-section mt-5">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Formulaire de contact</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-10">
+					<div class="wrapper">
+						<div class="row no-gutters align-items-center">
+							<div class="col-md-6">
+								<div class="contact-wrap w-100 p-lg-5 p-4 text-center">
+									<h3 class="mb-4">Envoyer moi un message</h3>
+									<div id="form-message-warning" class="mb-4"></div>
+									<div id="form-message-success" class="mb-4">
+										Your message was sent, thank you!
+									</div>
+									{{ form_start(form) }}
+
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm ">
+										<div class="d-flex flex-column text-center">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label for="name">Nom</label>
+													{{ form_widget(form.name) }}
+
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label for="email">Email</label>
+													{{ form_widget(form.email) }}
+
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<div class="form-group">
+													<label for="message">Message</label>
+													{{ form_widget(form.message) }}
+													<label class="mr-4 mt-5" for="RGPD">J'accepte le RGPD (
+														<a href="{{path('app_rgpd')}}">Mentions legales</a>
+														)</label>
+
+													{{ form_widget(form.RGPDConscent) }}
+
+
+												</div>
+											</div>
+
+
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Envoyer" class="btn btn-success">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+										{{ form_end(form) }}
+
+									</form>
+								</div>
+							</div>
+							<div class="col-md-6 d-flex justify-content-center">
+								<div class="info w-100 p-lg-5 p-4 img text-center">
+									<h3>Contacter moi</h3>
+									<p class="mb-4">Je suis ouvert a toutes propositions</p>
+									<div class="dbox w-100 d-flex align-items-center">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-map-marker"></span>
+										</div>
+										<div class="text pl-3">
+											<p>
+												<span>Addresse:</span>
+												Saint-nazaire 44600, Pays de la loire</p>
+										</div>
+									</div>
+									<div class="dbox w-100 d-flex align-items-center">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-phone"></span>
+										</div>
+										<div class="text pl-3">
+											<p>
+												<span>Tel:</span>
+												<a href="tel://+33752065433">07 52 06 54 33</a>
+											</p>
+										</div>
+									</div>
+									<div class="dbox w-100 d-flex align-items-center">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-paper-plane"></span>
+										</div>
+										<div class="text pl-3">
+											<p>
+												<span>Email:</span>
+												<a href="mailto:psykodev.cyber@gmail.com">thomas.danny@psyko-dev.site</a>
+
+
+											</p>
+										</div>
+									</div>
+									<div class="dbox w-100 d-flex align-items-center">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-globe"></span>
+										</div>
+										<div class="text pl-3">
+											<p>
+												<span>Site</span>
+												<a href="#">psyko-portfolio</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+{% endblock %}

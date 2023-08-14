@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Projects
+{% endblock %}
+
+{% block body %}
+
+	<header class="mastheadAdmin d-flex align-items-center">
+
+		<div class="container px-4 px-lg-5 text-center">
+
+			<h1 class="mb-1"></h1>
+
+
+		</div>
+	</header>
+
+
+	<div class="container mt-5">
+		<h1>Modifier projet</h1>
+
+		{{ include('admin/_delete_form.html.twig') }}
+		{{ include('admin/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+
+	</a>
+
+	<a class="text-success" href="{{ path('app_admin_index') }}">Retour a la liste</a>
+
+
+</div>{% endblock %}

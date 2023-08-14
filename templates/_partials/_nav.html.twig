@@ -1,0 +1,89 @@
+<!-- Navigation-->
+<div class="navHead bg-dark">
+	<div class="logoPsyko Nav">
+		<a href="{{path('app_home')}}"><img src="{{asset("assets/img/logopsyko.png")}}" alt="Logo-Psyko" width="130px" height="auto"></a>
+	</div>
+
+	{% if is_granted('ROLE_ADMIN')  %}
+
+		<div class="admin">
+			<a href="{{path('app_admin_index')}}">
+
+				<h3>Admin</h3>
+			</a>
+		</div>
+		<div class="admin">
+			<a href="{{path('app_message_admin_index')}}">
+
+
+				<h3>Admin Message</h3>
+			</a>
+		</div>
+
+	{% endif %}
+
+	<div>
+		<a id="nav" class="menu-toggle rounded" href="#">
+			<i class="fas fa-bars icone-menu" style="color: #10e956; "></i>
+
+		</a>
+		<nav id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+
+				<li class="sidebar-nav-item">
+					<a href="{{path('app_home')}}">Home</a>
+
+				</li>
+				<li class="sidebar-nav-item">
+					<a href="{{path('app_home')}}#about">Qui je suis ?</a>
+
+				</li>
+				<li class="sidebar-nav-item">
+					<a href="{{path('app_home')}}#skills">Mes competences</a>
+
+				</li>
+				<li class="sidebar-nav-item">
+					<a href="{{path('app_home')}}#project">Mes Realisations</a>
+
+				</li>
+
+				<li class="sidebar-nav-item">
+					<a href="{{path('app_contact')}}">Contact</a>
+
+				</li>
+				{% if app.user %}
+					<li class="sidebar-nav-item">
+						<a href="{{path('app_logout')}}">Deconnexion</a>
+
+					</li>
+
+
+			{% else %}
+
+				</li>
+				<li class="sidebar-nav-item">
+					<a href="{{path('app_login')}}">Connexion</a>
+
+				</li>
+			{% endif %}
+		</ul>
+
+
+		<div class="d-flex flex-column">
+			<a class="githubSid" href="https://github.com/Psyko44?tab=repositories" target="_blank">
+
+				<p>Github</p>
+				<i class="fa-brands fa-github" style="color: #919191;font-size: 80px;"></i>
+
+			</a>
+			<a class="linkedinSid " href="https://www.linkedin.com/in/danny-thomas-53b743130/" target="_blank">
+
+				<p>Linkedin</p>
+				<i class="fa-brands fa-linkedin" style="color: #919191;font-size: 80px;"></i>
+
+
+			</a>
+
+		</div>
+	</nav>
+</div></div>
