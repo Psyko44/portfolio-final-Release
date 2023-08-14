@@ -47,15 +47,15 @@ Create the database and schema:
   
     http://localhost:8000
 
-##Customization
+## Customization
 
 If you need to customize the project further, refer to the project's documentation or source code for specific instructions.
 
-##Troubleshooting
+## Troubleshooting
 
 If you encounter any issues during setup or usage, feel free to open an issue in the project's repository.
 
-##Contributing
+## Contributing
 
 Contributions are welcome! If you find any issues or have improvements to suggest, please open an issue or submit a pull request.
 
