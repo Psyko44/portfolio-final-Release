@@ -46,3 +46,20 @@ Create the database and schema:
     ```bash
   
     http://localhost:8000
+
+Customization
+
+If you need to customize the project further, refer to the project's documentation or source code for specific instructions.
+
+Troubleshooting
+
+If you encounter any issues during setup or usage, feel free to open an issue in the project's repository.
+
+Contributing
+
+Contributions are welcome! If you find any issues or have improvements to suggest, please open an issue or submit a pull request.
+
+License
+
+This project is licensed under the MIT License - see the [LICENSE](MIT%20License)
+ file for details.
