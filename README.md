@@ -59,7 +59,7 @@ If you encounter any issues during setup or usage, feel free to open an issue in
 
 Contributions are welcome! If you find any issues or have improvements to suggest, please open an issue or submit a pull request.
 
-##License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](MIT%20License)
  file for details.
